@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTK Writer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">OTK <span>Writer</span></div>
+  <div class="top-actions">
+    <button id="newBtn">New</button>
+    <button id="saveBtn">Save</button>
+    <button id="loadBtn">Load</button>
+    <button id="pdfBtn" class="primary">Export PDF</button>
+  </div>
+</header>
+
+<section class="toolbar">
+
+  <select id="fontName">
+    <option value="Arial">Arial</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier New">Courier New</option>
+  </select>
+
+  <select id="fontSize">
+    <option value="2">12</option>
+    <option value="3" selected>16</option>
+    <option value="4">18</option>
+    <option value="5">24</option>
+    <option value="6">32</option>
+    <option value="7">48</option>
+  </select>
+
+  <button data-command="bold"><b>B</b></button>
+  <button data-command="italic"><i>I</i></button>
+  <button data-command="underline"><u>U</u></button>
+
+  <label class="color-label">
+    A
+    <input type="color" id="textColor" value="#111827">
+  </label>
+
+  <button data-command="justifyLeft">☰</button>
+  <button data-command="justifyCenter">≡</button>
+  <button data-command="justifyRight">☷</button>
+
+  <button data-command="insertUnorderedList">• List</button>
+  <button data-command="insertOrderedList">1. List</button>
+
+  <button data-command="undo">↶</button>
+  <button data-command="redo">↷</button>
+
+  <label class="image-btn">
+    🖼 Image
+    <input type="file" id="imageInput" accept="image/*" hidden>
+  </label>
+
+  <button id="clearFormatBtn">Clear</button>
+
+</section>
+
+<main class="workspace">
+
+  <div class="status-row">
+    <input id="documentTitle" value="My Document">
+    <span id="status">Ready</span>
+  </div>
+
+  <section id="page" class="page" contenteditable="true" spellcheck="true">
+    <h1>My Document</h1>
+    <p>यहाँ अपना टेक्स्ट लिखना शुरू करें...</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>OTK Writer • No Login Required</span>
+  <span id="wordCount">Words: 0</span>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
